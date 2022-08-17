@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  zigbee2mqtt:
+    image: koenkk/zigbee2mqtt
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data/zigbee2mqtt:/app/data
+      - /run/udev:/run/udev:ro
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+    environment:
+      - TZ=Europe/Berlin

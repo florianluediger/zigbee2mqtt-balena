@@ -1,0 +1,19 @@
+homeassistant: false
+permit_join: false
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://a32z8pwwjokx52-ats.iot.eu-central-1.amazonaws.com:8883
+  ca: /app/data/AmazonRootCA1.pem
+  key: /app/data/private.pem.key
+  cert: /app/data/certificate.pem.crt
+serial:
+  port: /dev/ttyACM0
+advanced:
+  homeassistant_legacy_entity_attributes: false
+  legacy_api: false
+  log_level: debug
+device_options:
+  legacy: false
+frontend:
+  port: 8080
+  host: 0.0.0.0
