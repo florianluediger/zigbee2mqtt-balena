@@ -1,13 +1,16 @@
-version: '3.8'
+version: '2.4'
+volumes:
+  zigbee2mqtt-data:
 services:
   zigbee2mqtt:
-    image: koenkk/zigbee2mqtt
+    build:
+      context: .
     restart: always
+    network_mode: host
     ports:
       - "8080:8080"
     volumes:
-      - ./data/zigbee2mqtt:/app/data
-      - /run/udev:/run/udev:ro
+      - zigbee2mqtt-data:/app/data
     devices:
       - /dev/ttyACM0:/dev/ttyACM0
     environment:

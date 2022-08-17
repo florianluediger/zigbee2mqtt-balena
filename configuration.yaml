@@ -2,7 +2,7 @@ homeassistant: false
 permit_join: false
 mqtt:
   base_topic: zigbee2mqtt
-  server: mqtt://a32z8pwwjokx52-ats.iot.eu-central-1.amazonaws.com:8883
+  server: mqtt://this-will-be-overwritten.iot.eu-central-1.amazonaws.com:8883
   ca: /app/data/AmazonRootCA1.pem
   key: /app/data/private.pem.key
   cert: /app/data/certificate.pem.crt
